@@ -4,40 +4,36 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<title></title>
-<style>
-	a {
-			font-family:Bell MT;
-			font-size:20px;
+	<title>Q3 Project Test</title>
+	<style>
+		body {
+            font-family: Times New Roman ;
+            text-align: center;
+            background: url('https://appassets.mvtdev.com/map/41/l/1022/237346/7827917.jpg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            padding:auto;
+            margin:auto;
+            text-align:center;
+        }
+            img{
+			width: 200px;
+			height: 100px;
 		}
-	form {
-			font-family:Bell MT;
-			font-size:20px;
-		}
-	p{
-		font-size: 220px;
-	}
-	.splide__slide img {
-  	width: 100%;
-  	height: auto;
-	}
-	.container1{
-	background-color: #bf773d;
-	}
-	.container2{
-	background-color: #eeeee4;
-	width:303px;
-	padding: 15px;
-	margin: auto;
-	box-shadow: 2px 2px 50px rgba(0,0,0, 0.8);
-	border: 2px dashed orange;
-	
 	</style>
 </head>
 <body>
 <nav class="navbar navbar-expand-md bg-light navbar-light fixed top">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="index.html"><b>TICKETING CENTER TEST</b></a>
+		<a class="navbar-brand" href="index.html"><b>SANTOLAN TICKETING CENTER</b></a>
 
 		 <div class="collapse navbar-collapse">
 		 	<ul class="navbar-nav me-auto">
@@ -60,7 +56,78 @@
 		 	</form>
 		</div>
 	</nav>
-</head>
+	<br>
+	<br>
+	<br>
+	<center>
+		<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<details ontoggle="message()">
+				<summary>— Information and Instructions —</summary>
+				<i id="show"></i>
+				<p> Please input the following information required. The route of Santolan to Recto is shown for your reference.</p>
+			</details>
+				<table class="table-bordered">
+					<tr class="table-primary">
+					<th> REVIEW OF SANTOLAN-RECTO ROUTE</th>
+	<tr class= "table-warning">
+		<td><img src="https://appassets.mvtdev.com/map/41/l/1022/237346/7827917.jpg"></td>
+</summary>
+<br><summary>— Print Ticket —</summary>
+		<i id="show"></i>
+		<br>
+		<img src="https://www.pngmart.com/files/6/Ticket-PNG-Free-Download.png"><button type="Submit" class="btn btn-success" onclick="print()">Print Ticket</button>
+	</details><br>
+	<form>
+	<h1>Check your Ticket Price here! (test)</h1>
+    <label for="originalPrice">Original Price:</label>
+    <br>
+    <select id="originalPrice">
+        <option value="0">Choose</option>
+            <option value="13">Santolan</option>
+            <option value="14.5">Katipunan</option>
+            <option value="15">Anonas</option>
+            <option value="16.5">Araneta Center-Cubao</option>
+            <option value="17">Betty Go-Belmonte</option>
+            <option value="18.5">Gilmore</option>
+            <option value="19">J. Ruiz</option>
+            <option value="20.5">V. Mapa</option>
+            <option value="21">Pureza</option>
+            <option value="22.5">Legarda</option>
+            <option value="23">Recto</option>
+    </select><br><br>
+    <label for="discountRate">Discount Rate (%):</label>
+    <br>
+    <select id="discountRate">
+        	<option value="0">Choose</option>
+            <option value="0">Regular</option>
+            <option value="20">Student</option>
+            <option value="50">PWD</option>
+            <option value="80">Senior Citizens</option>
+    </select><br><br>
 
+    <button onclick="calculateDiscountedPrice()">Calculate Ticket Price Here :</button>
+    <h2>Ticket Price: ₱<span id="discountedPrice">0.00</span></h2>
+    </form>
+
+    <br>
+    <br>
+    <p>Most information provided are from <a href="https://www.google.com/maps/dir/Santolan,+Metro+Manila/Recto+Ave,+Manila,+Metro+Manila/@14.6288689,120.9502242,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3397b818ae9e81d1:0x857e5b1449b643c8!2m2!1d121.0879674!2d14.6130735!1m5!1m1!1s0x3397ca045466c0d5:0x2847f3dd1cf41582!2m2!1d120.9783164!2d14.6046786?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D">Google Maps, Santolan-Recto Route</a></p>
+
+<script>
+        function calculateDiscountedPrice() {
+            var originalPrice =(document.getElementById('originalPrice').value);
+            var discountRate = (document.getElementById('discountRate').value);
+            
+            var discount = (discountRate / 100) * originalPrice;
+            var discountedPrice = originalPrice - discount;
+            
+            document.getElementById('discountedPrice').textContent = discountedPrice.toFixed(2);
+        }
+        function print(){
+		window.alert("Printing the ticket may take a few days. Please check your email in 3-6 days.");
+	}
+    </script>
 </body>
 </html>
