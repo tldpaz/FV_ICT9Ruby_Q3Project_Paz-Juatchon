@@ -10,6 +10,7 @@
   a {
             font-family:Bell MT;
             font-size:20px;
+            color: #8affff;
         }
     form {
             font-family:Bell MT;
@@ -24,29 +25,41 @@
     }
     textarea {
     		width: 100%;
-
     }
     label{
     	text-align: center;
+    	color: #8affff;
+    	border: solid;
+    	border-width: 3px;
+    	border-color: #ffcf21;
+    	background-color: black;
+
     }
     body {
-    	background-image: url(https://i.pinimg.com/736x/57/0c/61/570c618dd841454e30f4467f1f8f58ea.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
+    	background-image: url(https://static1.straitstimes.com.sg/s3fs-public/articles/2016/05/23/dw-mrt-160523.jpg?VersionId=.6En4lRBoaK.7hJ8keWQNb61g6PhhBl1);
+           
     }
     h1 {
-    	background: #6a6da6;
-                border: double;
-                border-color: #c9ba9f;
-                border-width: 15px;
+    	background: black;
+                border-width: 1px;
                 text-align: center;
+                font-family: Bell MT;
+                border: solid;
+                border-width: 10px;
+                color: #8affff;
+                border-color: #ffcf21;
+                background-color: black;
+
+    }
+    p2 {
+    		color: white;
 
     }
     
     </style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-md bg-light navbar-light fixed top">
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed top">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html"><b>TICKETING CENTER TEST</b></a>
 
@@ -73,6 +86,9 @@
     </nav>
     <br>
 	<h1 class="text-center">Leave a Comment</h1>
+	<center>
+	<p2> We value your feedback, Talk to us!</p2>
+</center>
 	<br>
 	<div class="container">
 		<form>
@@ -83,20 +99,25 @@
 			<div class="col-md-12">
 			
 
+						<center>
 						<td class="text-center"></td>
 						<td><form>
-							<label for="name">Name:</label>
+							<label for="name">Feedback</label>
 							<textarea rows="4" cols="30" placeholder="Type your answer here..."></textarea>
 						<br>
                     	</button></form>
 						</form>
 						
 						<br><br>
+						<center>
 						<label for="name">Name:</label>
+					</center>
 	
 						<input type="text" id="name" name="name">
 						<br><br>
+						<center>
 						<label for="name">Email:</label>
+					</center>
 
 						<input type="email" id="email" name="email">
 						<br>
@@ -111,6 +132,6 @@
       					<br>
 					</tr>
 				</table>
-
+			</center>
 </body>
 </html>
